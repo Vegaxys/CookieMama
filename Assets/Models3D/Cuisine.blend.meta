@@ -93,6 +93,21 @@ ModelImporter:
     100174: Tringue
     100176: TV
     100178: TV.001
+    100180: Camera
+    100182: C_Bouteille
+    100184: C_Hotte
+    100186: C_Table
+    100188: Maison
+    100190: C_Evier
+    100192: C_Four
+    100194: C_MicroOnde
+    100196: C_Mixeur
+    100198: C_Tirroir
+    100200: C_Ordinateur
+    100202: C_Radiateur
+    100204: C_TV
+    100206: C_TV.001
+    100208: Tirroir.008
     400000: Cube
     400002: Cube.001
     400004: Cube.002
@@ -183,8 +198,24 @@ ModelImporter:
     400174: Tringue
     400176: TV
     400178: TV.001
+    400180: Camera
+    400182: C_Bouteille
+    400184: C_Hotte
+    400186: C_Table
+    400188: Maison
+    400190: C_Evier
+    400192: C_Four
+    400194: C_MicroOnde
+    400196: C_Mixeur
+    400198: C_Tirroir
+    400200: C_Ordinateur
+    400202: C_Radiateur
+    400204: C_TV
+    400206: C_TV.001
+    400208: Tirroir.008
     2000000: left
     2000002: left.001
+    2000004: Camera
     2100000: Beige
     2100002: Blanc
     2100004: Noir
@@ -198,6 +229,8 @@ ModelImporter:
     2100020: Glass
     2100022: Eau
     2100024: lambert1
+    2100026: Ecran
+    2100028: Parquet
     2300000: Cube
     2300002: Cube.001
     2300004: Cube.002
@@ -283,6 +316,20 @@ ModelImporter:
     2300164: Tringue
     2300166: TV
     2300168: TV.001
+    2300170: C_Bouteille
+    2300172: C_Hotte
+    2300174: C_Table
+    2300176: Maison
+    2300178: C_Evier
+    2300180: C_Four
+    2300182: C_MicroOnde
+    2300184: C_Mixeur
+    2300186: C_Tirroir
+    2300188: C_Ordinateur
+    2300190: C_Radiateur
+    2300192: C_TV
+    2300194: C_TV.001
+    2300196: Tirroir.008
     3300000: Cube
     3300002: Cube.001
     3300004: Cube.002
@@ -368,6 +415,20 @@ ModelImporter:
     3300164: Tringue
     3300166: TV
     3300168: TV.001
+    3300170: C_Bouteille
+    3300172: C_Hotte
+    3300174: C_Table
+    3300176: Maison
+    3300178: C_Evier
+    3300180: C_Four
+    3300182: C_MicroOnde
+    3300184: C_Mixeur
+    3300186: C_Tirroir
+    3300188: C_Ordinateur
+    3300190: C_Radiateur
+    3300192: C_TV
+    3300194: C_TV.001
+    3300196: Tirroir.008
     4300000: Frigo
     4300002: Cube.004
     4300004: PorteFrigoBas
@@ -453,6 +514,20 @@ ModelImporter:
     4300164: Cube.009
     4300166: Cube.065
     4300168: pCube3
+    4300170: Maison
+    4300172: C_Table
+    4300174: C_Hotte
+    4300176: C_Bouteille
+    4300178: C_Four
+    4300180: C_MicroOnde
+    4300182: C_Mixeur
+    4300184: C_Evier
+    4300186: C_Tirroir
+    4300188: Tirroir.008
+    4300190: C_Ordinateur
+    4300192: C_TV
+    4300194: C_TV.001
+    4300196: C_Radiateur
     10800000: Point
     10800002: Sun
     2186277476908879412: ImportLogs

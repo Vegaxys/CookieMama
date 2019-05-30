@@ -84,6 +84,7 @@ ModelImporter:
     100156: Tringue
     100158: TV
     100160: TV.001
+    100162: Maison
     400000: //RootNode
     400002: BezierCircle
     400004: Cube
@@ -165,6 +166,7 @@ ModelImporter:
     400156: Tringue
     400158: TV
     400160: TV.001
+    400162: Maison
     2100000: lambert1
     2100002: Beige
     2100004: Blanc
@@ -178,6 +180,8 @@ ModelImporter:
     2100020: Porte
     2100022: Glass
     2100024: Eau
+    2100026: Ecran
+    2100028: Parquet
     2300000: //RootNode
     2300002: BezierCircle
     2300004: Cube
@@ -259,6 +263,7 @@ ModelImporter:
     2300156: Tringue
     2300158: TV
     2300160: TV.001
+    2300162: Maison
     3300000: //RootNode
     3300002: BezierCircle
     3300004: Cube
@@ -340,6 +345,7 @@ ModelImporter:
     3300156: Tringue
     3300158: TV
     3300160: TV.001
+    3300162: Maison
     4300000: pCube3
     4300002: Frigo
     4300004: Cube.004
@@ -421,6 +427,7 @@ ModelImporter:
     4300156: Cylinder.002
     4300158: Cylinder.003
     4300160: Cube.005
+    4300162: Maison
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

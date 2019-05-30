@@ -86,6 +86,8 @@ ModelImporter:
     100160: Tringue
     100162: TV
     100164: TV.001
+    100166: Maison
+    100168: Tirroir.008
     400000: BezierCircle
     400002: Cube
     400004: Cube.002
@@ -169,6 +171,10 @@ ModelImporter:
     400160: Tringue
     400162: TV
     400164: TV.001
+    400166: Maison
+    400168: Tirroir.008
+    2100000: Ecran
+    2100002: Parquet
     2300000: BezierCircle
     2300002: Cube
     2300004: Cube.002
@@ -249,6 +255,8 @@ ModelImporter:
     2300154: Tringue
     2300156: TV
     2300158: TV.001
+    2300160: Maison
+    2300162: Tirroir.008
     3300000: BezierCircle
     3300002: Cube
     3300004: Cube.002
@@ -329,6 +337,8 @@ ModelImporter:
     3300154: Tringue
     3300156: TV
     3300158: TV.001
+    3300160: Maison
+    3300162: Tirroir.008
     4300000: Frigo
     4300002: Cube.004
     4300004: PorteFrigoBas
@@ -409,6 +419,8 @@ ModelImporter:
     4300154: Cylinder.002
     4300156: Cylinder.003
     4300158: Cube.005
+    4300160: Maison
+    4300162: Tirroir.008
     10800000: Point
     10800002: Sun
     2186277476908879412: ImportLogs
