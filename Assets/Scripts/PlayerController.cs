@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour{
     //****************************** Tests **********************************
 
     private void FireBall() {
-        GameObject ball = Instantiate(testBall, transform.GetChild(0).position + Vector3.forward, _camera.rotation);
-        ball.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
+        GameObject ball = Instantiate(testBall, _camera.position + _camera.forward, _camera.rotation);
+        ball.GetComponent<Rigidbody>().AddForce(_camera.forward * 20, ForceMode.Impulse);
         Destroy(ball, 5);
     }
 }

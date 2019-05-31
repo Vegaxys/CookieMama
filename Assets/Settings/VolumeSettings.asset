@@ -51,7 +51,7 @@ MonoBehaviour:
   active: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 1000
+    m_Value: 6000
     min: 0
   cascadeShadowSplitCount:
     m_OverrideState: 1
@@ -113,9 +113,13 @@ MonoBehaviour:
     showEyeDropper: 1
   density:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.746
     min: 0
     max: 1
+  maxFogDistance:
+    m_OverrideState: 0
+    m_Value: 5000
+    min: 0
   mipFogMaxMip:
     m_OverrideState: 1
     m_Value: 0.5
@@ -131,7 +135,7 @@ MonoBehaviour:
     min: 0
   fogDistance:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 1200
     min: 0
   fogBaseHeight:
     m_OverrideState: 1
