@@ -88,6 +88,9 @@ ModelImporter:
     100164: TV.001
     100166: Maison
     100168: Tirroir.008
+    100170: Camera
+    100172: Interior
+    100174: Light
     400000: BezierCircle
     400002: Cube
     400004: Cube.002
@@ -173,8 +176,15 @@ ModelImporter:
     400164: TV.001
     400166: Maison
     400168: Tirroir.008
+    400170: Camera
+    400172: Interior
+    400174: Light
+    2000000: Camera
     2100000: Ecran
     2100002: Parquet
+    2100004: Etable
+    2100006: Toit
+    2100008: Bordure
     2300000: BezierCircle
     2300002: Cube
     2300004: Cube.002
@@ -257,6 +267,7 @@ ModelImporter:
     2300158: TV.001
     2300160: Maison
     2300162: Tirroir.008
+    2300164: Interior
     3300000: BezierCircle
     3300002: Cube
     3300004: Cube.002
@@ -339,6 +350,7 @@ ModelImporter:
     3300158: TV.001
     3300160: Maison
     3300162: Tirroir.008
+    3300164: Interior
     4300000: Frigo
     4300002: Cube.004
     4300004: PorteFrigoBas
@@ -421,8 +433,10 @@ ModelImporter:
     4300158: Cube.005
     4300160: Maison
     4300162: Tirroir.008
+    4300164: Interior
     10800000: Point
     10800002: Sun
+    10800004: Light
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
