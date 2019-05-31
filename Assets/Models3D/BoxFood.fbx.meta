@@ -1,25 +1,14 @@
 fileFormatVersion: 2
-guid: 4ade05a550930994b87705bf300e8585
+guid: 46469a7df16e4d2478db1172d4c28ce1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: //RootNode
-    100004: Light
-    100006: pCube3
-    400000: Camera
-    400002: //RootNode
-    400004: Light
-    400006: pCube3
-    2000000: Camera
-    2100000: Etable
-    2100002: Fenetre
-    2100004: Toit
-    2100006: Bordure
-    2300000: pCube3
-    3300000: pCube3
-    4300000: pCube3
-    10800000: Light
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Food
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
