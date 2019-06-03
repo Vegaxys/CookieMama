@@ -8622,6 +8622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f00da004c4a2ff4fa97ff64b0da2c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i_cookieTotal: 0
   i_cookie: 0
   i_cookiePerSecond: 1
   f_cookieCadence: 1
@@ -8629,6 +8630,15 @@ MonoBehaviour:
   i_milk: 0
   i_egg: 0
   i_chocolate: 0
+  i_flourStock: 0
+  i_milkStock: 0
+  i_eggStock: 0
+  i_chocolateStock: 0
+  i_flourStockPerSecond: 5
+  i_milkStockPerSecond: 5
+  i_eggStockPerSecond: 5
+  i_chocolateStockPerSecond: 5
+  f_stockCadence: 1
 --- !u!4 &1947665600
 Transform:
   m_ObjectHideFlags: 0
