@@ -39,12 +39,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fenetre
-    second: {fileID: 2100000, guid: 0d1999f80a50c194882df52af32b70c0, type: 2}
+    second: {fileID: 2100000, guid: 3c10f544086fe5741b2e08605fd1117f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Toit
-    second: {fileID: 2100000, guid: e1dfaadae734aa34d8698c7cf9164aa2, type: 2}
+    second: {fileID: 2100000, guid: 83ad874c207e59246b4f0655378ec2bb, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
