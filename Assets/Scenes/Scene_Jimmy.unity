@@ -8639,6 +8639,10 @@ MonoBehaviour:
   i_eggStockPerSecond: 5
   i_chocolateStockPerSecond: 5
   f_stockCadence: 1
+  i_flourStockLimit: 50
+  i_milkStockLimit: 50
+  i_eggStockLimit: 50
+  i_chocolateStockLimit: 50
 --- !u!4 &1947665600
 Transform:
   m_ObjectHideFlags: 0

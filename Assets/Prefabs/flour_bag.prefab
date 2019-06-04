@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7851500558376773759}
   - component: {fileID: 7851500558377576541}
   - component: {fileID: 7851500558378674845}
-  - component: {fileID: 2948928465369872667}
+  - component: {fileID: 3672753336646336394}
   m_Layer: 0
   m_Name: polySurface2
   m_TagString: Untagged
@@ -109,8 +109,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2948928465369872667
-MeshCollider:
+--- !u!65 &3672753336646336394
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,7 +119,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: b197b9164895753419259e4821b34661, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.3582296, y: 4.3689957, z: 1.9052218}
+  m_Center: {x: -0.6836899, y: 1.2430719, z: 0.050572004}

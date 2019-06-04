@@ -13,8 +13,8 @@ public class Ressources_Manager : MonoBehaviour
     public float f_cookieCadence;
     private float f_cookieCadenceInitial;
 
-    [Header("Ingredients")]
     //Valeurs Ressources
+    [Header("Ingredients")]
     public int i_flour;
     public int i_milk;
     public int i_egg;
@@ -34,7 +34,6 @@ public class Ressources_Manager : MonoBehaviour
 
     [Header("Timer stock")]
     public float f_stockCadence;
-    private float f_stockCadenceInitial;
 
     [Header("Ingredients Stock Limit")]
     public int i_flourStockLimit;
@@ -45,15 +44,13 @@ public class Ressources_Manager : MonoBehaviour
     void Start()
     {
         f_cookieCadenceInitial = f_cookieCadence;
-        f_stockCadenceInitial = f_stockCadence;
-        //f_ressourcesCadenceInitial = f_ressourcesCadence;
+
+        StartCoroutine(AddIngredientStock());
     }
 
     void Update()
     {
         f_cookieCadence -= Time.deltaTime;
-        f_stockCadence -= Time.deltaTime;
-        //f_ressourcesCadence -= Time.deltaTime;
 
         //Recipe Cookie
         if (i_chocolate >= 1 && i_flour >= 2 && i_milk >= 3 && i_egg >= 4)
@@ -68,6 +65,7 @@ public class Ressources_Manager : MonoBehaviour
             }
         }
 
+        //Stock Limit
         if(i_flourStock >= i_flourStockLimit)
         {
             i_flourStock = i_flourStockLimit;
@@ -83,28 +81,6 @@ public class Ressources_Manager : MonoBehaviour
         if (i_chocolateStock >= i_chocolateStockLimit)
         {
             i_chocolateStock = i_chocolateStockLimit;
-        }
-
-        if (f_stockCadence <= 0)
-        {
-            if (i_flourStock <= i_flourStockLimit)
-            {
-                i_flourStock += i_flourStockPerSecond;
-            }
-            if (i_milkStock <= i_milkStockLimit)
-            {
-                i_milkStock += i_milkStockPerSecond;
-            }
-            if (i_eggStock <= i_eggStockLimit)
-            {
-                i_eggStock += i_eggStockPerSecond;
-            }
-            if (i_chocolateStock <= i_chocolateStockLimit)
-            {
-                i_chocolateStock += i_chocolateStockPerSecond;
-            }
-
-            f_stockCadence = f_stockCadenceInitial;
         }
 
         //Add Cookie per second
@@ -148,6 +124,49 @@ public class Ressources_Manager : MonoBehaviour
         {
             AddChocolateStockPerSecond(5);
         }
+
+        //Add stock limits
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            AddFlourStockLimit(10);
+        }
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            AddMilkStockLimit(10);
+        }
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            AddEggStockLimit(10);
+        }
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+            AddChocolateStockLimit(10);
+        }
+    }
+
+    //Every second, Add ingredient in stock
+    IEnumerator AddIngredientStock()
+    {
+        yield return new WaitForSeconds(f_stockCadence);
+
+        if (i_flourStock <= i_flourStockLimit)
+        {
+            i_flourStock += i_flourStockPerSecond;
+        }
+        if (i_milkStock <= i_milkStockLimit)
+        {
+            i_milkStock += i_milkStockPerSecond;
+        }
+        if (i_eggStock <= i_eggStockLimit)
+        {
+            i_eggStock += i_eggStockPerSecond;
+        }
+        if (i_chocolateStock <= i_chocolateStockLimit)
+        {
+            i_chocolateStock += i_chocolateStockPerSecond;
+        }
+
+        StartCoroutine(AddIngredientStock());
     }
 
     int CreateCookie(int flour, int milk, int egg, int chocolate)
@@ -202,6 +221,25 @@ public class Ressources_Manager : MonoBehaviour
     void AddChocolateStockPerSecond(int addChocolatePerSecond)
     {
         i_chocolateStockPerSecond += addChocolatePerSecond;
+    }
+
+    //Function Add Stock limits
+    [ContextMenu("AddFlourStockLimit")]
+    public void AddFlourStockLimit(int addFlourStockLimit)
+    {
+        i_flourStockLimit += addFlourStockLimit;
+    }
+    void AddMilkStockLimit(int addMilkStockLimit)
+    {
+        i_milkStockLimit += addMilkStockLimit;
+    }
+    void AddEggStockLimit(int addEggStockLimit)
+    {
+        i_eggStockLimit += addEggStockLimit;
+    }
+    void AddChocolateStockLimit(int addChocolateStockLimit)
+    {
+        i_chocolateStockLimit += addChocolateStockLimit;
     }
 
 }

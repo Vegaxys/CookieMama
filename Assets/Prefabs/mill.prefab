@@ -53,20 +53,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &117921021
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5259213490985344032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 71b8442dcdd909d459b220bbff87db25, type: 3}
 --- !u!114 &5259213491921686903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +72,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5259213490219934696}
     m_Modifications:
+    - target: {fileID: 100000, guid: 71b8442dcdd909d459b220bbff87db25, type: 3}
+      propertyPath: m_Name
+      value: mill_core
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71b8442dcdd909d459b220bbff87db25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -130,10 +120,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 71b8442dcdd909d459b220bbff87db25, type: 3}
-      propertyPath: m_Name
-      value: mill_core
-      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 71b8442dcdd909d459b220bbff87db25, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -146,12 +132,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5259213490985245314}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5259213490985344032 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 71b8442dcdd909d459b220bbff87db25,
-    type: 3}
-  m_PrefabInstance: {fileID: 5259213490985245314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5259213491239014520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +139,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5259213490219934696}
     m_Modifications:
+    - target: {fileID: 100000, guid: 3d8f1b58f0a834f449520fdcc72f7bf6, type: 3}
+      propertyPath: m_Name
+      value: mill_small_turbine
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d8f1b58f0a834f449520fdcc72f7bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0105445655
@@ -215,10 +199,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.89601046
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 3d8f1b58f0a834f449520fdcc72f7bf6, type: 3}
-      propertyPath: m_Name
-      value: mill_small_turbine
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3d8f1b58f0a834f449520fdcc72f7bf6, type: 3}
       propertyPath: m_LocalRotation.w
       value: -1
@@ -250,13 +230,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5259213490219934696}
     m_Modifications:
-    - target: {fileID: 100002, guid: 53aa32978e32e744f9f496faedcba13f, type: 3}
-      propertyPath: m_Name
-      value: mill_big_turbine
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 53aa32978e32e744f9f496faedcba13f, type: 3}
       propertyPath: m_Name
       value: mill_big_turbines
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 53aa32978e32e744f9f496faedcba13f, type: 3}
+      propertyPath: m_Name
+      value: mill_big_turbine
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53aa32978e32e744f9f496faedcba13f, type: 3}
       propertyPath: m_LocalPosition.x
