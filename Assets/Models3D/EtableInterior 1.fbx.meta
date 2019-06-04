@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 4ade05a550930994b87705bf300e8585
+guid: 1f8f97e73a95e7f40b545e28f931049a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Camera
     100002: //RootNode
-    100004: Light
-    100006: pCube3
-    100008: Light.001
+    100004: Interior
+    100006: Light
     400000: Camera
     400002: //RootNode
-    400004: Light
-    400006: pCube3
-    400008: Light.001
+    400004: Interior
+    400006: Light
     2000000: Camera
     2100000: Etable
-    2100002: Fenetre
-    2100004: Toit
-    2100006: Bordure
-    2300000: pCube3
-    3300000: pCube3
-    4300000: pCube3
+    2100002: Toit
+    2100004: Bordure
+    2100006: Fentre
+    2300000: Interior
+    3300000: Interior
+    4300000: Interior
     10800000: Light
-    10800002: Light.001
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -34,11 +31,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Etable
-    second: {fileID: 2100000, guid: 5bc9c2c671a1fe44ba67b35e6383201c, type: 2}
+    second: {fileID: 2100000, guid: c1ddd3b5b57ed9d419fc81e6a81171aa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Fenetre
+      name: Fentre
     second: {fileID: 2100000, guid: 3c10f544086fe5741b2e08605fd1117f, type: 2}
   - first:
       type: UnityEngine:Material
