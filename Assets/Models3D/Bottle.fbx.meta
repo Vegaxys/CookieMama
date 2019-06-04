@@ -6,6 +6,9 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: bouteille
+    2100004: Bouchon
+    2100006: Lait
     2300000: //RootNode
     3300000: //RootNode
     4300000: Bottle
@@ -13,8 +16,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bouchon
+    second: {fileID: 2100000, guid: 07db0da01a6c7934691d98df1652d71b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lait
+    second: {fileID: 2100000, guid: eac0ff656b0137d48932e922171f1e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille
+    second: {fileID: 2100000, guid: 3c10f544086fe5741b2e08605fd1117f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: d7643bc768ba9d042a930a9f8c30615e, type: 2}
+    second: {fileID: 2100000, guid: eac0ff656b0137d48932e922171f1e58, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
