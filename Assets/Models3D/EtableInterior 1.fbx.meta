@@ -25,8 +25,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bordure
+    second: {fileID: 2100000, guid: eac0ff656b0137d48932e922171f1e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Etable
+    second: {fileID: 2100000, guid: c1ddd3b5b57ed9d419fc81e6a81171aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fentre
     second: {fileID: 2100000, guid: 3c10f544086fe5741b2e08605fd1117f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toit
+    second: {fileID: 2100000, guid: d71f596fa60801f408da05bd7438a79d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

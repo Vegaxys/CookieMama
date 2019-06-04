@@ -44,7 +44,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Toit
-    second: {fileID: 2100000, guid: 83ad874c207e59246b4f0655378ec2bb, type: 3}
+    second: {fileID: 2100000, guid: d71f596fa60801f408da05bd7438a79d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
