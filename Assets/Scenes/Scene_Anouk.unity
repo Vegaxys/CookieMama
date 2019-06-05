@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -239,7 +239,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &284781820
 MonoBehaviour:
@@ -250,24 +250,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 284781817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36ea2ef8aa3fe14b94c975aa8ec04f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 379ca66611e64704b8134287fcdc6d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 588341622}
   rigid: {fileID: 284781819}
-  testBall: {fileID: 0}
+  testBall: {fileID: 887006953}
   speed: 5
-  mouseSensitivity: 5
-  xClampMax: 80
-  xClampMin: -80
-  xClamp: 0
-  fallMultiplier: 2
-  jumpForce: 50
+  fallMultiplier: 1
+  jumpForce: 20
   distanceToGround: 2
-  value: 170
   hasJump: 0
-  lockCursor: 0
-  hideCursor: 0
 --- !u!136 &284781821
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -809,17 +802,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 588341616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c63d831c51d6e243b7b1be9f393aeb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 905cee24ea8fa9740b0e8cb0c6eb2cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CameraMoveSpeed: 120
   CameraFollowObj: {fileID: 294289434}
   clampAngle: 80
   inputSensitivity: 150
-  CameraObj: {fileID: 588341616}
   PlayerObj: {fileID: 284781817}
-  smoothX: 3
-  smoothY: 3
 --- !u!114 &588341618
 MonoBehaviour:
   m_ObjectHideFlags: 0
