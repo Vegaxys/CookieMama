@@ -47,6 +47,13 @@ public class Ressources_Manager : MonoBehaviour
     public int i_eggPlayer;
     public int i_chocolatePlayer;
 
+    #region Singleton(enfin, c'est pas un vrai)
+    public static Ressources_Manager ressourcesManager;
+    private void Awake() {
+        ressourcesManager = this;
+    }
+    #endregion
+
     void Start()
     {
         f_cookieCadenceInitial = f_cookieCadence;
