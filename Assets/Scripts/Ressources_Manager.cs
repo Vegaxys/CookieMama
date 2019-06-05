@@ -41,6 +41,12 @@ public class Ressources_Manager : MonoBehaviour
     public int i_eggStockLimit;
     public int i_chocolateStockLimit;
 
+    [Header("Ingredients on Player")]
+    public int i_flourPlayer;
+    public int i_milkPlayer;
+    public int i_eggPlayer;
+    public int i_chocolatePlayer;
+
     void Start()
     {
         f_cookieCadenceInitial = f_cookieCadence;
@@ -92,19 +98,19 @@ public class Ressources_Manager : MonoBehaviour
         //Add Ingredients
         if (Input.GetKeyDown(KeyCode.U))
         {
-            AddFlour(10);
+            AddFlour(i_flourPlayer);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            AddMilk(10);
+            AddMilk(i_milkPlayer);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            AddEgg(10);
+            AddEgg(i_eggPlayer);
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            AddChocolate(10);
+            AddChocolate(i_chocolatePlayer);
         }
 
         //Add Ingredients per second in stock
@@ -141,6 +147,24 @@ public class Ressources_Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Slash))
         {
             AddChocolateStockLimit(10);
+        }
+
+        //Take ingredient from stock
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            TakeFlour(i_flourStock);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            TakeMilk(i_milkStock);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            TakeEgg(i_eggStock);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            TakeChocolate(i_chocolateStock);
         }
     }
 
@@ -182,43 +206,47 @@ public class Ressources_Manager : MonoBehaviour
     }
 
     //Function Add Cookie per second
-    void AddCookiePerSecond(int addCookiePerSecond)
+    public void AddCookiePerSecond(int addCookiePerSecond)
     {
         i_cookiePerSecond += addCookiePerSecond;
     }
 
     //Functions Add Ingredients
-    void AddFlour(int addFlour)
+    public void AddFlour(int addFlour)
     {
         i_flour += addFlour;
+        i_flourPlayer -= i_flourPlayer;
     }
-    void AddMilk(int addMilk)
+    public void AddMilk(int addMilk)
     {
         i_milk += addMilk;
+        i_milkPlayer -= i_milkPlayer;
     }
-    void AddEgg(int addEgg)
+    public void AddEgg(int addEgg)
     {
         i_egg += addEgg;
+        i_eggPlayer -= i_eggPlayer;
     }
-    void AddChocolate(int addChocolate)
+    public void AddChocolate(int addChocolate)
     {
         i_chocolate += addChocolate;
+        i_chocolatePlayer -= i_chocolatePlayer;
     }
 
     //Function Add Ingredients per second in stock
-    void AddFlourStockPerSecond(int addFlourPerSecond)
+    public void AddFlourStockPerSecond(int addFlourPerSecond)
     {
         i_flourStockPerSecond += addFlourPerSecond;
     }
-    void AddMilkStockPerSecond(int addMilkPerSecond)
+    public void AddMilkStockPerSecond(int addMilkPerSecond)
     {
         i_milkStockPerSecond += addMilkPerSecond;
     }
-    void AddEggStockPerSecond(int addEggPerSecond)
+    public void AddEggStockPerSecond(int addEggPerSecond)
     {
         i_eggStockPerSecond += addEggPerSecond;
     }
-    void AddChocolateStockPerSecond(int addChocolatePerSecond)
+    public void AddChocolateStockPerSecond(int addChocolatePerSecond)
     {
         i_chocolateStockPerSecond += addChocolatePerSecond;
     }
@@ -229,17 +257,38 @@ public class Ressources_Manager : MonoBehaviour
     {
         i_flourStockLimit += addFlourStockLimit;
     }
-    void AddMilkStockLimit(int addMilkStockLimit)
+    public void AddMilkStockLimit(int addMilkStockLimit)
     {
         i_milkStockLimit += addMilkStockLimit;
     }
-    void AddEggStockLimit(int addEggStockLimit)
+    public void AddEggStockLimit(int addEggStockLimit)
     {
         i_eggStockLimit += addEggStockLimit;
     }
-    void AddChocolateStockLimit(int addChocolateStockLimit)
+    public void AddChocolateStockLimit(int addChocolateStockLimit)
     {
         i_chocolateStockLimit += addChocolateStockLimit;
     }
 
+    //Function Take from stock
+    public void TakeFlour(int stockFlour)
+    {
+        i_flourPlayer += stockFlour;
+        i_flourStock -= i_flourStock;
+    }
+    public void TakeMilk(int stockMilk)
+    {
+        i_milkPlayer += stockMilk;
+        i_milkStock -= i_milkStock;
+    }
+    public void TakeEgg(int stockEgg)
+    {
+        i_eggPlayer += stockEgg;
+        i_eggStock -= i_eggStock;
+    }
+    public void TakeChocolate(int stockChocolate)
+    {
+        i_chocolatePlayer += stockChocolate;
+        i_chocolateStock -= i_chocolateStock;
+    }
 }
