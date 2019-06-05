@@ -1,50 +1,38 @@
 fileFormatVersion: 2
-guid: 4ade05a550930994b87705bf300e8585
+guid: 9ea37969c04576b49b59d9950d38bed8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: //RootNode
-    100004: Light
-    100006: pCube3
-    100008: Light.001
-    400000: Camera
-    400002: //RootNode
-    400004: Light
-    400006: pCube3
-    400008: Light.001
-    2000000: Camera
-    2100000: Etable
-    2100002: Fenetre
-    2100004: Toit
-    2100006: Bordure
-    2300000: pCube3
-    3300000: pCube3
-    4300000: pCube3
-    10800000: Light
-    10800002: Light.001
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2100002: bouteille
+    2100004: Bouchon
+    2100006: Lait
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Bottle
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bordure
+      name: Bouchon
+    second: {fileID: 2100000, guid: 07db0da01a6c7934691d98df1652d71b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lait
     second: {fileID: 2100000, guid: eac0ff656b0137d48932e922171f1e58, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Etable
-    second: {fileID: 2100000, guid: 5bc9c2c671a1fe44ba67b35e6383201c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fenetre
+      name: bouteille
     second: {fileID: 2100000, guid: 3c10f544086fe5741b2e08605fd1117f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Toit
-    second: {fileID: 2100000, guid: d71f596fa60801f408da05bd7438a79d, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: eac0ff656b0137d48932e922171f1e58, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
