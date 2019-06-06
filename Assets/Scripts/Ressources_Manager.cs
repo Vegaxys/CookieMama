@@ -110,24 +110,6 @@ public class Ressources_Manager : MonoBehaviour
             AddCookiePerSecond(1);
         }
 
-        //Add Ingredients
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            AddFlour(i_flourPlayer);
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            AddMilk(i_milkPlayer);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            AddEgg(i_eggPlayer);
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            AddChocolate(i_chocolatePlayer);
-        }
-
         //Upgrades
         if(i_cookie >= i_upgradePrice)
         {
@@ -248,25 +230,31 @@ public class Ressources_Manager : MonoBehaviour
 
     #region AddIngredients
     //Functions Add Ingredients
-    public void AddFlour(int addFlour)
-    {
-        i_flour += addFlour;
-        i_flourPlayer -= i_flourPlayer;
+    public void GiveToMammy() {
+        AddFlour();
+        AddMilk();
+        AddEgg();
+        AddChocolate();
     }
-    public void AddMilk(int addMilk)
+    private void AddFlour()
     {
-        i_milk += addMilk;
-        i_milkPlayer -= i_milkPlayer;
+        i_flour += i_flourPlayer;
+        i_flourPlayer = 0;
     }
-    public void AddEgg(int addEgg)
+    private void AddMilk()
     {
-        i_egg += addEgg;
-        i_eggPlayer -= i_eggPlayer;
+        i_milk += i_milkPlayer;
+        i_milkPlayer = 0;
     }
-    public void AddChocolate(int addChocolate)
+    private void AddEgg()
     {
-        i_chocolate += addChocolate;
-        i_chocolatePlayer -= i_chocolatePlayer;
+        i_egg += i_eggPlayer;
+        i_eggPlayer = 0;
+    }
+    private void AddChocolate()
+    {
+        i_chocolate += i_chocolatePlayer;
+        i_chocolatePlayer = 0;
     }
     #endregion
 
