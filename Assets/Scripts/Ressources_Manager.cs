@@ -47,6 +47,12 @@ public class Ressources_Manager : MonoBehaviour
     public int i_eggPlayer;
     public int i_chocolatePlayer;
 
+    [Header("Upgrades Prices")]
+    public int i_upgradePrice;
+
+    [Header("Sounds")]
+    public AudioSource upgrade;
+
     void Start()
     {
         f_cookieCadenceInitial = f_cookieCadence;
@@ -89,12 +95,6 @@ public class Ressources_Manager : MonoBehaviour
             i_chocolateStock = i_chocolateStockLimit;
         }
 
-        //Add Cookie per second
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            AddCookiePerSecond(1);
-        }
-
         //Add Ingredients
         if (Input.GetKeyDown(KeyCode.U))
         {
@@ -113,40 +113,50 @@ public class Ressources_Manager : MonoBehaviour
             AddChocolate(i_chocolatePlayer);
         }
 
-        //Add Ingredients per second in stock
-        if (Input.GetKeyDown(KeyCode.J))
+        //Upgrades
+        if(i_cookie >= i_upgradePrice)
         {
-            AddFlourStockPerSecond(5);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            AddMilkStockPerSecond(5);
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            AddEggStockPerSecond(5);
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            AddChocolateStockPerSecond(5);
-        }
+            //Add Cookie per second
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                AddCookiePerSecond(1);
+            }
 
-        //Add stock limits
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            AddFlourStockLimit(10);
-        }
-        if (Input.GetKeyDown(KeyCode.Comma))
-        {
-            AddMilkStockLimit(10);
-        }
-        if (Input.GetKeyDown(KeyCode.Period))
-        {
-            AddEggStockLimit(10);
-        }
-        if (Input.GetKeyDown(KeyCode.Slash))
-        {
-            AddChocolateStockLimit(10);
+            //Add Ingredients per second in stock
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                AddFlourStockPerSecond(5);
+            }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                AddMilkStockPerSecond(5);
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                AddEggStockPerSecond(5);
+            }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                AddChocolateStockPerSecond(5);
+            }
+
+            //Add stock limits
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                AddFlourStockLimit(10);
+            }
+            if (Input.GetKeyDown(KeyCode.Comma))
+            {
+                AddMilkStockLimit(10);
+            }
+            if (Input.GetKeyDown(KeyCode.Period))
+            {
+                AddEggStockLimit(10);
+            }
+            if (Input.GetKeyDown(KeyCode.Slash))
+            {
+                AddChocolateStockLimit(10);
+            }
         }
 
         //Take ingredient from stock
@@ -166,6 +176,8 @@ public class Ressources_Manager : MonoBehaviour
         {
             TakeChocolate(i_chocolateStock);
         }
+
+        //Increase upgrades prices 
     }
 
     //Every second, Add ingredient in stock
@@ -202,6 +214,11 @@ public class Ressources_Manager : MonoBehaviour
         i_egg -= egg;
         i_chocolate -= chocolate;
 
+        i_flour -= i_flour / 100;
+        i_milk -= i_milk / 100;
+        i_egg -= i_egg / 100;
+        i_chocolate -= i_chocolate / 100;
+
         return cookie;
     }
 
@@ -209,6 +226,10 @@ public class Ressources_Manager : MonoBehaviour
     public void AddCookiePerSecond(int addCookiePerSecond)
     {
         i_cookiePerSecond += addCookiePerSecond;
+        i_cookiePerSecond += i_cookieTotal / 100;
+
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
 
     //Functions Add Ingredients
@@ -237,18 +258,30 @@ public class Ressources_Manager : MonoBehaviour
     public void AddFlourStockPerSecond(int addFlourPerSecond)
     {
         i_flourStockPerSecond += addFlourPerSecond;
+        i_flourStockPerSecond += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddMilkStockPerSecond(int addMilkPerSecond)
     {
         i_milkStockPerSecond += addMilkPerSecond;
+        i_milkStockPerSecond += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddEggStockPerSecond(int addEggPerSecond)
     {
         i_eggStockPerSecond += addEggPerSecond;
+        i_eggStockPerSecond += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddChocolateStockPerSecond(int addChocolatePerSecond)
     {
         i_chocolateStockPerSecond += addChocolatePerSecond;
+        i_chocolateStockPerSecond += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
 
     //Function Add Stock limits
@@ -256,18 +289,30 @@ public class Ressources_Manager : MonoBehaviour
     public void AddFlourStockLimit(int addFlourStockLimit)
     {
         i_flourStockLimit += addFlourStockLimit;
+        i_flourStockLimit += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddMilkStockLimit(int addMilkStockLimit)
     {
         i_milkStockLimit += addMilkStockLimit;
+        i_milkStockLimit += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddEggStockLimit(int addEggStockLimit)
     {
         i_eggStockLimit += addEggStockLimit;
+        i_eggStockLimit += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
     public void AddChocolateStockLimit(int addChocolateStockLimit)
     {
         i_chocolateStockLimit += addChocolateStockLimit;
+        i_chocolateStockLimit += i_cookieTotal / 100;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
 
     //Function Take from stock
