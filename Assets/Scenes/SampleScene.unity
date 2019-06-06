@@ -23923,6 +23923,8 @@ MonoBehaviour:
   i_milkPlayer: 0
   i_eggPlayer: 0
   i_chocolatePlayer: 0
+  i_upgradePrice: 0
+  upgrade: {fileID: 0}
 --- !u!1001 &1542701535
 PrefabInstance:
   m_ObjectHideFlags: 0

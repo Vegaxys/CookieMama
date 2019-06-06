@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ressources_Manager : MonoBehaviour
 {
+    #region Variables
     [Header("Cookie Numbers")]
     public int i_cookieTotal;
     public int i_cookie;
@@ -52,6 +52,7 @@ public class Ressources_Manager : MonoBehaviour
 
     [Header("Sounds")]
     public AudioSource upgrade;
+    #endregion
 
     #region Singleton(enfin, c'est pas un vrai)
     public static Ressources_Manager ressourcesManager;
@@ -77,8 +78,9 @@ public class Ressources_Manager : MonoBehaviour
             if (f_cookieCadence <= 0)
             {
                 //f_cookie += 1;
-                i_cookie += CreateCookie(1, 2, 3, 4);
-                i_cookieTotal += CreateCookie(0, 0, 0, 0);
+                int _cookie = CreateCookie(1, 2, 3, 4);
+                i_cookie += _cookie;
+                i_cookieTotal += _cookie;
 
                 f_cookieCadence = f_cookieCadenceInitial;
             }
@@ -138,56 +140,56 @@ public class Ressources_Manager : MonoBehaviour
             //Add Ingredients per second in stock
             if (Input.GetKeyDown(KeyCode.J))
             {
-                AddFlourStockPerSecond(5);
+                AddFlourStockPerSecond();
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
-                AddMilkStockPerSecond(5);
+                AddMilkStockPerSecond();
             }
             if (Input.GetKeyDown(KeyCode.L))
             {
-                AddEggStockPerSecond(5);
+                AddEggStockPerSecond();
             }
             if (Input.GetKeyDown(KeyCode.M))
             {
-                AddChocolateStockPerSecond(5);
+                AddChocolateStockPerSecond();
             }
 
             //Add stock limits
             if (Input.GetKeyDown(KeyCode.N))
             {
-                AddFlourStockLimit(10);
+                AddFlourStockLimit();
             }
             if (Input.GetKeyDown(KeyCode.Comma))
             {
-                AddMilkStockLimit(10);
+                AddMilkStockLimit();
             }
             if (Input.GetKeyDown(KeyCode.Period))
             {
-                AddEggStockLimit(10);
+                AddEggStockLimit();
             }
             if (Input.GetKeyDown(KeyCode.Slash))
             {
-                AddChocolateStockLimit(10);
+                AddChocolateStockLimit();
             }
         }
 
         //Take ingredient from stock
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
-            TakeFlour(i_flourStock);
+            TakeFlour();
         }
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            TakeMilk(i_milkStock);
+            TakeMilk();
         }
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            TakeEgg(i_eggStock);
+            TakeEgg();
         }
         if (Input.GetKeyDown(KeyCode.Keypad4))
         {
-            TakeChocolate(i_chocolateStock);
+            TakeChocolate();
         }
         #endregion
     }
@@ -244,6 +246,7 @@ public class Ressources_Manager : MonoBehaviour
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
 
+    #region AddIngredients
     //Functions Add Ingredients
     public void AddFlour(int addFlour)
     {
@@ -265,86 +268,116 @@ public class Ressources_Manager : MonoBehaviour
         i_chocolate += addChocolate;
         i_chocolatePlayer -= i_chocolatePlayer;
     }
+    #endregion
 
+    #region Add Ingredient per second
     //Function Add Ingredients per second in stock
-    public void AddFlourStockPerSecond(int addFlourPerSecond)
+    public void AddFlourStockPerSecond()
     {
-        i_flourStockPerSecond += addFlourPerSecond;
-        i_flourStockPerSecond += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
-    public void AddMilkStockPerSecond(int addMilkPerSecond)
-    {
-        i_milkStockPerSecond += addMilkPerSecond;
-        i_milkStockPerSecond += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
-    public void AddEggStockPerSecond(int addEggPerSecond)
-    {
-        i_eggStockPerSecond += addEggPerSecond;
-        i_eggStockPerSecond += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
-    public void AddChocolateStockPerSecond(int addChocolatePerSecond)
-    {
-        i_chocolateStockPerSecond += addChocolatePerSecond;
-        i_chocolateStockPerSecond += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
+        if (!TestCookie())
+            return;
 
-    //Function Add Stock limits
-    public void AddFlourStockLimit(int addFlourStockLimit)
+        i_flourStockPerSecond += (i_cookieTotal / 100) + 5;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    public void AddMilkStockPerSecond()
     {
-        i_flourStockLimit += addFlourStockLimit;
+        if (!TestCookie())
+            return;
+
+        i_milkStockPerSecond += (i_cookieTotal / 100) + 5;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    public void AddEggStockPerSecond()
+    {
+        if (!TestCookie())
+            return;
+
+        i_eggStockPerSecond += (i_cookieTotal / 100) + 5;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    public void AddChocolateStockPerSecond()
+    {
+        if (!TestCookie())
+            return;
+
+        i_chocolateStockPerSecond += (i_cookieTotal / 100) + 5;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    #endregion
+
+    bool TestCookie() {
+        bool result = false;
+        result = (i_cookie >= i_upgradePrice);
+        return result;
+}
+
+    #region Add Stock Limit
+    //Function Add Stock limits
+    public void AddFlourStockLimit()
+    {
+        if (!TestCookie())
+            return;
+
+        i_flourStockLimit += (i_cookieTotal / 100) + 10;
         i_flourStockLimit += i_cookieTotal / 100;
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
     }
-    public void AddMilkStockLimit(int addMilkStockLimit)
+    public void AddMilkStockLimit()
     {
-        i_milkStockLimit += addMilkStockLimit;
-        i_milkStockLimit += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
-    public void AddEggStockLimit(int addEggStockLimit)
-    {
-        i_eggStockLimit += addEggStockLimit;
-        i_eggStockLimit += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
-    public void AddChocolateStockLimit(int addChocolateStockLimit)
-    {
-        i_chocolateStockLimit += addChocolateStockLimit;
-        i_chocolateStockLimit += i_cookieTotal / 100;
-        i_cookie -= i_upgradePrice;
-        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
-    }
+        if (!TestCookie())
+            return;
 
+        i_milkStockLimit += (i_cookieTotal / 100) + 10;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    public void AddEggStockLimit()
+    {
+        if (!TestCookie())
+            return;
+
+        i_eggStockLimit += (i_cookieTotal / 100) + 10;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    public void AddChocolateStockLimit()
+    {
+        if (!TestCookie())
+            return;
+
+        i_chocolateStockLimit += (i_cookieTotal / 100) + 10;
+        i_cookie -= i_upgradePrice;
+        i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
+    }
+    #endregion
+
+    #region Take Ingredient
     //Function Take from stock
-    public void TakeFlour(int stockFlour)
+    public void TakeFlour()
     {
-        i_flourPlayer += stockFlour;
-        i_flourStock -= i_flourStock;
+        i_flourPlayer += i_flourStock;
+        i_flourStock = 0;
     }
-    public void TakeMilk(int stockMilk)
+    public void TakeMilk()
     {
-        i_milkPlayer += stockMilk;
-        i_milkStock -= i_milkStock;
+        i_milkPlayer += i_milkStock;
+        i_milkStock = 0;
     }
-    public void TakeEgg(int stockEgg)
+    public void TakeEgg()
     {
-        i_eggPlayer += stockEgg;
-        i_eggStock -= i_eggStock;
+        i_eggPlayer += i_eggStock;
+        i_eggStock = 0;
     }
-    public void TakeChocolate(int stockChocolate)
+    public void TakeChocolate()
     {
-        i_chocolatePlayer += stockChocolate;
-        i_chocolateStock -= i_chocolateStock;
+        i_chocolatePlayer += i_chocolateStock;
+        i_chocolateStock = 0;
     }
+    #endregion
 }
