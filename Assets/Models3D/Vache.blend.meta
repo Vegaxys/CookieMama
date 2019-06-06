@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 523dee79830408747872f845ff4896b4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Camera
+    100004: Cou
+    100006: Cuisse.L
+    100008: Cuisse.R
+    100010: Empty
+    100012: Empty.001
+    100014: Empty.002
+    100016: Empty.003
+    100018: Epaule.L
+    100020: Epaule.R
+    100022: IKJambe.L
+    100024: IKJambe.L_end
+    100026: IKJambe.R
+    100028: IKJambe.R_end
+    100030: IKPatte.L
+    100032: IKPatte.L_end
+    100034: IKPatte.R
+    100036: IKPatte.R_end
+    100038: Light
+    100040: PateAvant02.L
+    100042: PateAvant02.L_end
+    100044: PateAvant02.R
+    100046: PateAvant02.R_end
+    100048: PatteArriere01.L
+    100050: PatteArriere01.R
+    100052: PatteArriere02.L
+    100054: PatteArriere02.L_end
+    100056: PatteArriere02.R
+    100058: PatteArriere02.R_end
+    100060: PatteAvant01.L
+    100062: PatteAvant01.R
+    100064: Spine00
+    100066: Spine01
+    100068: Tete
+    100070: Tete.001
+    100072: Tete.001_end
+    100074: Tete_end
+    100076: VAche
+    100078: //RootNode
+    400000: Armature
+    400002: Camera
+    400004: Cou
+    400006: Cuisse.L
+    400008: Cuisse.R
+    400010: Empty
+    400012: Empty.001
+    400014: Empty.002
+    400016: Empty.003
+    400018: Epaule.L
+    400020: Epaule.R
+    400022: IKJambe.L
+    400024: IKJambe.L_end
+    400026: IKJambe.R
+    400028: IKJambe.R_end
+    400030: IKPatte.L
+    400032: IKPatte.L_end
+    400034: IKPatte.R
+    400036: IKPatte.R_end
+    400038: Light
+    400040: PateAvant02.L
+    400042: PateAvant02.L_end
+    400044: PateAvant02.R
+    400046: PateAvant02.R_end
+    400048: PatteArriere01.L
+    400050: PatteArriere01.R
+    400052: PatteArriere02.L
+    400054: PatteArriere02.L_end
+    400056: PatteArriere02.R
+    400058: PatteArriere02.R_end
+    400060: PatteAvant01.L
+    400062: PatteAvant01.R
+    400064: Spine00
+    400066: Spine01
+    400068: Tete
+    400070: Tete.001
+    400072: Tete.001_end
+    400074: Tete_end
+    400076: VAche
+    400078: //RootNode
+    2000000: Camera
+    2100000: Texture
+    4300000: VAche
+    7400000: Armature|Eat
+    7400002: Armature|Idle
+    9500000: //RootNode
+    10800000: Light
+    13700000: VAche
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
