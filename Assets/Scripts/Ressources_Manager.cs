@@ -95,7 +95,7 @@ public class Ressources_Manager : MonoBehaviour
         {
             i_chocolateStock = i_chocolateStockLimit;
         }
-
+        #region Inputs
         //Add Cookie per second
         if (Input.GetKeyDown(KeyCode.Y))
         {
@@ -173,6 +173,7 @@ public class Ressources_Manager : MonoBehaviour
         {
             TakeChocolate(i_chocolateStock);
         }
+        #endregion
     }
 
     //Every second, Add ingredient in stock
@@ -259,7 +260,6 @@ public class Ressources_Manager : MonoBehaviour
     }
 
     //Function Add Stock limits
-    [ContextMenu("AddFlourStockLimit")]
     public void AddFlourStockLimit(int addFlourStockLimit)
     {
         i_flourStockLimit += addFlourStockLimit;
