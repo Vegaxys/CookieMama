@@ -137,7 +137,17 @@ ModelImporter:
     4300046: Cube.022
     4300048: Cube.021
     4300050: Cube.027
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paille
+    second: {fileID: 2100000, guid: f7e74de58f59b004ca74468ff60950d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.001
+    second: {fileID: 2100000, guid: d71f596fa60801f408da05bd7438a79d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

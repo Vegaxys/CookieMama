@@ -102,7 +102,32 @@ ModelImporter:
     7400004: Armature|Walk
     9500000: //RootNode
     13700000: Cylinder.006
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bec
+    second: {fileID: 2100000, guid: 866744877d1f37d438b565f2d62bc5a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pate
+    second: {fileID: 2100000, guid: 866744877d1f37d438b565f2d62bc5a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plume
+    second: {fileID: 2100000, guid: 3fe356d97ef56324ea2b760b3166ccec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plumes cul
+    second: {fileID: 2100000, guid: d5ddc189e3dacd34b8c65d45d72ee30e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rouge
+    second: {fileID: 2100000, guid: 9180bc0b52c480e4e9912c4d6da6bf85, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
