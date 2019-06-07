@@ -24391,7 +24391,7 @@ MonoBehaviour:
   i_milkPlayer: 0
   i_eggPlayer: 0
   i_chocolatePlayer: 0
-  i_upgradePrice: 100
+  i_upgradePrice: 5
   source: {fileID: 1532939347}
   upgrade_cookie: {fileID: 8300000, guid: 9bc48f8aa3cf5a342b0a087b910c37eb, type: 3}
   upgrade: {fileID: 8300000, guid: 1fbc68fbdd570cc4f92dd34af7af765a, type: 3}

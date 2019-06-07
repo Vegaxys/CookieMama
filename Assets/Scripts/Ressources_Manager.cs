@@ -74,7 +74,7 @@ public class Ressources_Manager : MonoBehaviour
         f_cookieCadence -= Time.deltaTime;
 
         //Recipe Cookie
-        if (i_flour >= 1 && i_milk >= 2 && i_egg >= 3 && i_chocolate >= 4)
+        if (i_flour >= 2 && i_milk >= 2 && i_egg >= 3 && i_chocolate >= 2)
         {
             if (f_cookieCadence <= 0)
             {
