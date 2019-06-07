@@ -1,59 +1,32 @@
 fileFormatVersion: 2
-guid: 8a277a9b298973344bdd9f28ebe0c54d
+guid: 956880bcbdfdc8d40aff849aee7b6d26
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Area
-    100002: Area.001
-    100004: //RootNode
-    100006: Camera
-    100008: Cube
-    100010: Light
-    400000: Area
-    400002: Area.001
-    400004: //RootNode
-    400006: Camera
-    400008: Cube
-    400010: Light
-    2000000: Camera
+    100000: //RootNode
+    400000: //RootNode
     2100000: Tronc
-    2100002: Feuillage
-    2100004: Material
-    2100006: Tronc.001
-    2100008: Feuillage.001
-    2300000: Cube
-    2300002: //RootNode
-    3300000: Cube
-    3300002: //RootNode
-    4300000: Cube
-    4300002: Cube.001
-    4300004: Cube.000
-    4300006: BeautifulTree
-    6400000: //RootNode
-    10800000: Area
-    10800002: Area.001
-    10800004: Light
+    2100002: Noyau
+    2100004: Petales
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube.001
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Feuillage
-    second: {fileID: 2100000, guid: 28389d9833b8cff4eb6a5bf102943b56, type: 2}
+      name: Noyau
+    second: {fileID: 2100000, guid: 7f0a1a3fb55367b4e9320e8df1cf21c5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Feuillage.001
-    second: {fileID: 2100000, guid: 28389d9833b8cff4eb6a5bf102943b56, type: 2}
+      name: Petales
+    second: {fileID: 2100000, guid: 7f0a1a3fb55367b4e9320e8df1cf21c5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tronc
-    second: {fileID: 2100000, guid: 75594d169765e124ab54348e49e13ff5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tronc.001
-    second: {fileID: 2100000, guid: 75594d169765e124ab54348e49e13ff5, type: 2}
+    second: {fileID: 2100000, guid: c1ddd3b5b57ed9d419fc81e6a81171aa, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -84,7 +57,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -108,7 +81,7 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 0
+    normalSmoothAngle: 60
     normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
