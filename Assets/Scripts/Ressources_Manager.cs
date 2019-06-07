@@ -51,8 +51,8 @@ public class Ressources_Manager : MonoBehaviour
     public int i_upgradePrice;
 
     [Header("Sounds")]
-    public AudioSource upgrade;
-    public AudioSource upgrade_cookie;
+    public AudioSource source;
+    public AudioClip upgrade_cookie, upgrade;
     #endregion
 
     #region Singleton(enfin, c'est pas un vrai)
@@ -74,7 +74,7 @@ public class Ressources_Manager : MonoBehaviour
         f_cookieCadence -= Time.deltaTime;
 
         //Recipe Cookie
-        if (i_chocolate >= 1 && i_flour >= 2 && i_milk >= 3 && i_egg >= 4)
+        if (i_flour >= 1 && i_milk >= 2 && i_egg >= 3 && i_chocolate >= 4)
         {
             if (f_cookieCadence <= 0)
             {
@@ -248,7 +248,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade_cookie.Play();
+        source.clip = upgrade_cookie;
+        source.Play();
 }
 
     #region AddIngredients
@@ -292,7 +293,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddMilkStockPerSecond()
     {
@@ -303,7 +305,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddEggStockPerSecond()
     {
@@ -314,7 +317,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddChocolateStockPerSecond()
     {
@@ -325,7 +329,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     #endregion
 
@@ -347,7 +352,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddMilkStockLimit()
     {
@@ -358,7 +364,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddEggStockLimit()
     {
@@ -369,7 +376,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     public void AddChocolateStockLimit()
     {
@@ -380,7 +388,8 @@ public class Ressources_Manager : MonoBehaviour
         i_cookie -= i_upgradePrice;
         i_upgradePrice = i_upgradePrice + i_upgradePrice / 10;
 
-        upgrade.Play();
+        source.clip = upgrade;
+        source.Play();
     }
     #endregion
 
