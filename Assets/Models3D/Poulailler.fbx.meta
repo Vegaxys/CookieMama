@@ -330,7 +330,32 @@ ModelImporter:
     4300122: Cube.083
     4300124: Cube.085
     4300126: Cylinder.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d71f596fa60801f408da05bd7438a79d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: d5ddc189e3dacd34b8c65d45d72ee30e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: c1ddd3b5b57ed9d419fc81e6a81171aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: c1ddd3b5b57ed9d419fc81e6a81171aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 9852bb8673b56bb49b14ef1dde6c26c1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
