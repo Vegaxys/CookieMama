@@ -1,25 +1,26 @@
 fileFormatVersion: 2
-guid: 90692ca9b381d2544bb739812c1e5a1c
+guid: 4436ae684c2655a4f99db21588eba763
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: bottom
-    100002: //RootNode
-    100004: pCube11
-    400000: bottom
-    400002: //RootNode
-    400004: pCube11
-    2000000: bottom
-    2100000: lambert1
-    2300000: pCube11
-    3300000: pCube11
-    4300000: pCube11
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Feuillage.001
+    2100002: Tronc.001
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BeautifulTree
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 0ac8ee1f6efd74d468c21e68cc8ac4e9, type: 2}
+      name: Feuillage.001
+    second: {fileID: 2100000, guid: 7f0a1a3fb55367b4e9320e8df1cf21c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronc.001
+    second: {fileID: 2100000, guid: 3c2ce75de5b21744cb13b3046cea1b70, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +51,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -74,8 +75,8 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 0
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
